@@ -1,45 +1,23 @@
 
 import { Badge } from "@/components/ui/badge";
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail, Phone } from "lucide-react";
 
 const skills = [
-  { category: "Frontend", items: ["React", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Redux", "Next.js"] },
-  { category: "Backend", items: ["Node.js", "Express", "MongoDB", "REST API Design", "GraphQL", "AWS", "Firebase"] },
-  { category: "Tools", items: ["Git", "Docker", "Webpack", "Jest", "CI/CD", "VS Code", "Figma"] }
+  { category: "Frontend", items: ["HTML5", "CSS3", "ReactJs", "Vite", "AngularJs", "Bootstrap", "Tailwind CSS", "Next.js", "TypeScript", "Material-UI", "Redux"] },
+  { category: "Backend", items: ["Node.js", "Express", ".NET", "MongoDB", "RESTful APIs", "GraphQL", "Firebase"] },
+  { category: "Tools", items: ["Git", "GitHub", "Docker", "CI/CD", "VS Code", "Postman", "Figma", "StarUML", "Netlify", "Render"] }
 ];
 
 const experience = [
   {
-    company: "Tech Solutions Inc.",
-    position: "Senior Full Stack Developer",
-    period: "2021 - Present",
-    description: "Lead developer for multiple client projects, managing both frontend and backend development. Implemented modern web applications using React, Node.js, and MongoDB.",
+    company: "Suven Consultants & Technology Pvt Ltd.",
+    position: "Full Stack Developer",
+    period: "Aug 2024 - Dec 2024",
+    description: "Worked as a remote full stack developer, learning and implementing various web technologies.",
     achievements: [
-      "Reduced application load time by 40% through code optimization and lazy loading strategies",
-      "Implemented CI/CD pipeline, reducing deployment time by 60%",
-      "Mentored junior developers and conducted code reviews"
-    ]
-  },
-  {
-    company: "WebDev Studio",
-    position: "Frontend Developer",
-    period: "2019 - 2021",
-    description: "Developed responsive user interfaces using React and Redux. Collaborated with UX designers and backend developers to implement new features.",
-    achievements: [
-      "Created reusable component library, improving development efficiency by 30%",
-      "Implemented state management system using Redux, enhancing application performance",
-      "Collaborated with design team to improve UX across multiple projects"
-    ]
-  },
-  {
-    company: "StartUp Innovations",
-    position: "Junior Web Developer",
-    period: "2017 - 2019",
-    description: "Designed and developed websites for various clients using JavaScript, HTML, and CSS. Assisted senior developers with larger projects.",
-    achievements: [
-      "Developed responsive websites for 15+ clients",
-      "Learned React and Node.js, applying skills to internal projects",
-      "Contributed to company-wide code standards and best practices"
+      "Learned and implemented ReactJs, AngularJs, ExpressJs, NodeJs, MongoDB, NextJs, Firebase",
+      "Worked on various projects using various coding methodologies",
+      "Handled databases and created responsive front-ends using ReactJs, AngularJs, TailwindCSS, NextJs, TypeScript, Bootstrap"
     ]
   }
 ];
@@ -56,7 +34,7 @@ const About = () => {
                 About <span className="text-portfolio-blue">Me</span>
               </h1>
               <p className="text-xl text-gray-700 mb-6">
-                I'm a passionate Full Stack Developer with over 5 years of experience building web applications using the MERN stack.
+                I'm a passionate Full Stack Developer specializing in MERN stack application development.
               </p>
               <div className="flex space-x-4">
                 <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-portfolio-blue transition-colors">
@@ -65,11 +43,11 @@ const About = () => {
                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-portfolio-blue transition-colors">
                   <Linkedin size={24} />
                 </a>
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-portfolio-blue transition-colors">
-                  <Twitter size={24} />
-                </a>
-                <a href="mailto:info@johndoe.com" className="text-gray-600 hover:text-portfolio-blue transition-colors">
+                <a href="mailto:rahmatraj7786@gmail.com" className="text-gray-600 hover:text-portfolio-blue transition-colors">
                   <Mail size={24} />
+                </a>
+                <a href="tel:+91-7070715733" className="text-gray-600 hover:text-portfolio-blue transition-colors">
+                  <Phone size={24} />
                 </a>
               </div>
             </div>
@@ -77,7 +55,7 @@ const About = () => {
               <div className="aspect-square relative rounded-2xl overflow-hidden shadow-xl bg-gradient-to-br from-portfolio-blue to-portfolio-purple">
                 <img 
                   src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" 
-                  alt="John Doe" 
+                  alt="MD RAHMAT" 
                   className="object-cover w-full h-full mix-blend-overlay opacity-75" 
                 />
               </div>
@@ -93,16 +71,19 @@ const About = () => {
             <h2 className="section-title">My Story</h2>
             <div className="space-y-6 text-gray-700">
               <p>
-                I began my journey in web development during college where I discovered my passion for creating digital experiences. What started as a curiosity quickly evolved into a career as I began freelancing and building projects for local businesses.
+                I'm currently pursuing my B.Tech in Computer Science and Engineering at IIMT College of Engineering, Greater Noida (2021-2025) with a CGPA of 6.5.
               </p>
               <p>
-                After graduating with a degree in Computer Science, I joined a startup where I honed my skills in frontend development, learning React and modern JavaScript practices. Over time, I expanded my skills to include backend development with Node.js and Express, becoming a full-stack developer.
+                My journey in web development began during my college studies where I discovered my passion for creating digital experiences. 
+                I've been actively learning and implementing various web technologies including React, Node.js, Express, and MongoDB.
               </p>
               <p>
-                Today, I specialize in building full-stack applications with the MERN stack, focusing on creating responsive, user-friendly interfaces and robust backend systems. I'm passionate about clean code, performance optimization, and creating exceptional user experiences.
+                I recently worked as a Full Stack Developer intern at Suven Consultants & Technology Pvt Ltd., where I gained valuable industry experience 
+                working on real-world projects using the MERN stack and other modern frameworks.
               </p>
               <p>
-                When I'm not coding, you can find me hiking, reading technology blogs, or experimenting with new web technologies. I believe in continuous learning and regularly attend tech conferences and workshops to stay current with industry trends.
+                I specialize in creating full-stack web applications with particular expertise in frontend development using React, 
+                and backend development with Node.js and Express. I'm passionate about clean code, performance optimization, and creating exceptional user experiences.
               </p>
             </div>
           </div>
@@ -176,16 +157,17 @@ const About = () => {
             <div className="bg-white p-6 rounded-xl shadow-sm">
               <div className="flex justify-between items-start flex-wrap gap-2 mb-4">
                 <div>
-                  <h3 className="text-xl font-bold">Bachelor of Science in Computer Science</h3>
-                  <p className="text-portfolio-blue font-medium">University of Technology</p>
+                  <h3 className="text-xl font-bold">B.Tech in Computer Science and Engineering</h3>
+                  <p className="text-portfolio-blue font-medium">IIMT College of Engineering, Greater Noida</p>
                 </div>
                 <Badge variant="outline" className="text-sm">
-                  2013 - 2017
+                  2021 - 2025
                 </Badge>
               </div>
               <p className="text-gray-700">
-                Graduated with honors. Focused on web development, algorithms, and data structures. 
-                Participated in coding competitions and built several projects as part of coursework.
+                Currently pursuing with a CGPA of 6.5. Coursework includes Data Structures & Algorithms, 
+                Object-Oriented Programming, Computer Networks, Cloud Computing, Database Management Systems, 
+                Software Engineering, and Artificial Intelligence.
               </p>
             </div>
           </div>

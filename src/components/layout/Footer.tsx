@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <Link to="/" className="text-2xl font-bold mb-4 inline-block">
-              John<span className="text-portfolio-blue">Doe</span>
+              MD<span className="text-portfolio-blue">RAHMAT</span>
             </Link>
             <p className="text-gray-300 mb-4 max-w-md">
               Full-stack developer specializing in building exceptional digital experiences with the MERN stack.
@@ -23,11 +23,11 @@ const Footer = () => {
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                 <Linkedin size={20} />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
-                <Twitter size={20} />
-              </a>
-              <a href="mailto:info@johndoe.com" className="text-gray-400 hover:text-white transition-colors">
+              <a href="mailto:rahmatraj7786@gmail.com" className="text-gray-400 hover:text-white transition-colors">
                 <Mail size={20} />
+              </a>
+              <a href="tel:+91-7070715733" className="text-gray-400 hover:text-white transition-colors">
+                <Phone size={20} />
               </a>
             </div>
           </div>
@@ -45,15 +45,15 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-semibold mb-4">Contact</h3>
             <ul className="space-y-2 text-gray-300">
-              <li>New York, NY</li>
-              <li>info@johndoe.com</li>
-              <li>+1 (555) 123-4567</li>
+              <li>Greater Noida, India</li>
+              <li>rahmatraj7786@gmail.com</li>
+              <li>+91-7070715733</li>
             </ul>
           </div>
         </div>
         
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {currentYear} John Doe. All rights reserved.</p>
+          <p>&copy; {currentYear} MD RAHMAT. All rights reserved.</p>
         </div>
       </div>
     </footer>

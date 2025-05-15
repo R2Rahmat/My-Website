@@ -7,10 +7,10 @@ import { ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce application with user authentication, product management, cart functionality, and payment processing.",
+    title: "Finding Missing Person",
+    description: "A facial recognition application that helps identify missing persons. Users can sign up, log in, and upload photos of missing persons. The application leverages AI to improve detection accuracy.",
     image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-    tags: ["React", "Node.js", "Express", "MongoDB", "Redux"],
+    tags: ["React", "Node.js", "Express", "MongoDB", "AI", "Facial Recognition", "Python", "OpenCV", "TensorFlow", "Keras"],
     demoLink: "#",
     githubLink: "#",
     category: "Full Stack",
@@ -18,10 +18,10 @@ const projects = [
   },
   {
     id: 2,
-    title: "Task Management App",
-    description: "A productivity application for managing tasks, projects, and team collaboration with real-time updates.",
+    title: "Movie Web Browser",
+    description: "A responsive movie search application that allows users to find and explore movies. Features include OpenAI integration for enhanced recommendations and search functionality.",
     image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-    tags: ["React", "Node.js", "Express", "MongoDB", "Socket.IO"],
+    tags: ["React", "TailwindCSS", "Firebase", "Node.js", "Express", "OpenAI API"],
     demoLink: "#",
     githubLink: "#",
     category: "Full Stack",
@@ -29,10 +29,10 @@ const projects = [
   },
   {
     id: 3,
-    title: "Real Estate Marketplace",
-    description: "A platform for property listings with advanced search, filtering, and user favorites functionality.",
-    image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04",
-    tags: ["React", "Node.js", "Express", "MongoDB", "Google Maps API"],
+    title: "E-Commerce Platform (Help-kart)",
+    description: "An online shopping platform with user authentication, product browsing, cart functionality, and checkout process. Features secure transactions through Firebase.",
+    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
+    tags: ["React", "TailwindCSS", "Node.js", "Express", "MongoDB", "Firebase"],
     demoLink: "#",
     githubLink: "#",
     category: "Full Stack",
@@ -40,57 +40,13 @@ const projects = [
   },
   {
     id: 4,
-    title: "Weather Dashboard",
-    description: "A weather application that displays current and forecasted weather data using a third-party API.",
+    title: "E-Commerce Platform (Supplements Store)",
+    description: "A specialized e-commerce application focusing on supplement products. Features modern UI, secure authentication, and efficient data management.",
     image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
-    tags: ["React", "API Integration", "Chart.js", "Geolocation"],
-    demoLink: "#",
-    githubLink: "#",
-    category: "Frontend",
-    featured: false
-  },
-  {
-    id: 5,
-    title: "Personal Finance Tracker",
-    description: "An application for tracking personal finances, including income, expenses, and savings goals.",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-    tags: ["React", "Node.js", "Express", "MongoDB", "D3.js"],
+    tags: ["React", "TailwindCSS", "Node.js", "Express", "MongoDB"],
     demoLink: "#",
     githubLink: "#",
     category: "Full Stack",
-    featured: false
-  },
-  {
-    id: 6,
-    title: "Recipe Sharing Platform",
-    description: "A community-driven platform for sharing and discovering recipes with search and filtering capabilities.",
-    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
-    tags: ["React", "Node.js", "Express", "MongoDB", "Cloudinary"],
-    demoLink: "#",
-    githubLink: "#",
-    category: "Full Stack",
-    featured: false
-  },
-  {
-    id: 7,
-    title: "Responsive Portfolio Template",
-    description: "A customizable portfolio template for developers and designers to showcase their work.",
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-    tags: ["HTML", "CSS", "JavaScript", "Responsive Design"],
-    demoLink: "#",
-    githubLink: "#",
-    category: "Frontend",
-    featured: false
-  },
-  {
-    id: 8,
-    title: "API Documentation Generator",
-    description: "A tool for automatically generating API documentation from code comments and endpoints.",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
-    tags: ["Node.js", "Express", "Documentation", "CLI Tool"],
-    demoLink: "#",
-    githubLink: "#",
-    category: "Backend",
     featured: false
   }
 ];
@@ -156,11 +112,16 @@ const Projects = () => {
                   <h3 className="text-xl font-bold mb-2">{project.title}</h3>
                   <p className="text-gray-600 mb-4 flex-grow">{project.description}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.map((tag) => (
+                    {project.tags.slice(0, 5).map((tag) => (
                       <Badge key={tag} variant="secondary" className="text-xs">
                         {tag}
                       </Badge>
                     ))}
+                    {project.tags.length > 5 && (
+                      <Badge variant="outline" className="text-xs">
+                        +{project.tags.length - 5}
+                      </Badge>
+                    )}
                   </div>
                   <div className="flex space-x-4 mt-auto pt-4">
                     <a 

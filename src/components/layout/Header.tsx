@@ -40,7 +40,7 @@ const Header = () => {
     >
       <div className="container mx-auto flex items-center justify-between">
         <Link to="/" className="text-2xl font-bold text-portfolio-blue">
-          John<span className="text-portfolio-purple">Doe</span>
+          MD<span className="text-portfolio-purple">RAHMAT</span>
         </Link>
 
         {/* Desktop Navigation */}
