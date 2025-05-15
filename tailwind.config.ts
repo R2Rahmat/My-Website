@@ -64,11 +64,12 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				portfolio: {
-					blue: '#4A6CF7',
-					purple: '#8B5CF6',
-					indigo: '#6366F1',
-					darkBlue: '#111827',
-					lightBlue: '#E0E7FF'
+					blue: '#38bdf8', // Sky-400
+					yellow: '#facc15', // Yellow-400
+					dark: '#0f172a', // Slate-900
+					card: '#1e293b', // Slate-800
+					light: '#f1f5f9', // Slate-100
+					accent: '#38bdf8'
 				}
 			},
 			fontFamily: {
@@ -104,13 +105,18 @@ export default {
 				'fade-out': {
 					'0%': { opacity: '1', transform: 'translateY(0)' },
 					'100%': { opacity: '0', transform: 'translateY(10px)' }
-				}
+				},
+                'slide': {
+                    '0%': { transform: 'translateX(0)' },
+                    '100%': { transform: 'translateX(-100%)' }
+                }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.4s ease-out',
 				'fade-out': 'fade-out 0.4s ease-out',
+                'slide': 'slide 25s linear infinite'
 			}
 		}
 	},
