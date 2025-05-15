@@ -13,20 +13,20 @@ const Footer = () => {
             <Link to="/" className="text-2xl font-bold mb-4 inline-block">
               MD<span className="text-portfolio-blue">RAHMAT</span>
             </Link>
-            <p className="text-portfolio-light/70 mb-4 max-w-md">
+            <p className="text-portfolio-light/90 mb-4 max-w-md">
               Full-stack developer specializing in building exceptional digital experiences with the MERN stack.
             </p>
             <div className="flex space-x-4">
-              <a href="https://github.com/R2Rahmat" target="_blank" rel="noopener noreferrer" className="text-portfolio-light/70 hover:text-portfolio-blue transition-colors">
+              <a href="https://github.com/R2Rahmat" target="_blank" rel="noopener noreferrer" className="text-portfolio-light/90 hover:text-portfolio-blue transition-colors">
                 <Github size={20} />
               </a>
-              <a href="https://www.linkedin.com/in/md-rahmt-devloper0012" target="_blank" rel="noopener noreferrer" className="text-portfolio-light/70 hover:text-portfolio-blue transition-colors">
+              <a href="https://www.linkedin.com/in/md-rahmt-devloper0012" target="_blank" rel="noopener noreferrer" className="text-portfolio-light/90 hover:text-portfolio-blue transition-colors">
                 <Linkedin size={20} />
               </a>
-              <a href="mailto:rahmatraj7786@gmail.com" className="text-portfolio-light/70 hover:text-portfolio-blue transition-colors">
+              <a href="mailto:rahmatraj7786@gmail.com" className="text-portfolio-light/90 hover:text-portfolio-blue transition-colors">
                 <Mail size={20} />
               </a>
-              <a href="tel:+91-7070715733" className="text-portfolio-light/70 hover:text-portfolio-blue transition-colors">
+              <a href="tel:+91-7070715733" className="text-portfolio-light/90 hover:text-portfolio-blue transition-colors">
                 <Phone size={20} />
               </a>
             </div>
@@ -35,16 +35,16 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-semibold mb-4 text-portfolio-light">Quick Links</h3>
             <ul className="space-y-2">
-              <li><Link to="/" className="text-portfolio-light/70 hover:text-portfolio-blue transition-colors">Home</Link></li>
-              <li><Link to="/about" className="text-portfolio-light/70 hover:text-portfolio-blue transition-colors">About</Link></li>
-              <li><Link to="/projects" className="text-portfolio-light/70 hover:text-portfolio-blue transition-colors">Projects</Link></li>
-              <li><Link to="/certificates" className="text-portfolio-light/70 hover:text-portfolio-blue transition-colors">Certificates</Link></li>
+              <li><Link to="/" className="text-portfolio-light/90 hover:text-portfolio-blue transition-colors">Home</Link></li>
+              <li><Link to="/about" className="text-portfolio-light/90 hover:text-portfolio-blue transition-colors">About</Link></li>
+              <li><Link to="/projects" className="text-portfolio-light/90 hover:text-portfolio-blue transition-colors">Projects</Link></li>
+              <li><Link to="/certificates" className="text-portfolio-light/90 hover:text-portfolio-blue transition-colors">Certificates</Link></li>
             </ul>
           </div>
           
           <div>
             <h3 className="text-xl font-semibold mb-4 text-portfolio-light">Contact</h3>
-            <ul className="space-y-2 text-portfolio-light/70">
+            <ul className="space-y-2 text-portfolio-light/90">
               <li>Greater Noida, India</li>
               <li>rahmatraj7786@gmail.com</li>
               <li>+91-7070715733</li>
@@ -52,7 +52,7 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-portfolio-light/10 mt-8 pt-8 text-center text-portfolio-light/50">
+        <div className="border-t border-portfolio-light/10 mt-8 pt-8 text-center text-portfolio-light/80">
           <p>&copy; {currentYear} MD RAHMAT. All rights reserved.</p>
         </div>
       </div>

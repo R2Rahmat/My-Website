@@ -34,7 +34,7 @@ const Header = () => {
   return (
     <header 
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-portfolio-dark/90 backdrop-blur-md shadow-md py-3' : 'bg-transparent py-5'
+        isScrolled ? 'bg-portfolio-dark/95 backdrop-blur-md shadow-md py-3' : 'bg-transparent py-5'
       }`}
     >
       <div className="container mx-auto flex items-center justify-between">
@@ -55,8 +55,7 @@ const Header = () => {
           ))}
           <a 
             href="/resume.pdf" 
-            target="_blank"
-            rel="noopener noreferrer"
+            download="MD_RAHMAT_Resume.pdf"
             className="inline-flex items-center gap-2 text-portfolio-dark font-medium bg-portfolio-yellow hover:bg-portfolio-yellow/90 rounded-full px-4 py-2 transition-colors"
           >
             <Download size={16} />
@@ -72,7 +71,7 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden bg-portfolio-card backdrop-blur-md shadow-md">
+        <div className="md:hidden bg-portfolio-dark/95 backdrop-blur-md shadow-md">
           <nav className="container mx-auto py-4 flex flex-col space-y-4">
             {navLinks.map((link) => (
               <Link
@@ -86,8 +85,7 @@ const Header = () => {
             ))}
             <a 
               href="/resume.pdf" 
-              target="_blank"
-              rel="noopener noreferrer"
+              download="MD_RAHMAT_Resume.pdf"
               className="inline-flex items-center gap-2 w-fit text-portfolio-dark font-medium bg-portfolio-yellow hover:bg-portfolio-yellow/90 rounded-full px-4 py-2 transition-colors"
               onClick={() => setIsOpen(false)}
             >
