@@ -66,10 +66,15 @@ export default {
 				portfolio: {
 					blue: '#38bdf8', // Sky-400
 					yellow: '#facc15', // Yellow-400
-					dark: '#0f172a', // Slate-900
-					card: '#1e293b', // Slate-800
-					light: '#f1f5f9', // Slate-100
-					accent: '#38bdf8'
+					dark: '#1e293b', // Changed from dark to lighter slate-800
+					card: '#f1f5f9', // Changed to light background
+					light: '#1e293b', // Inverted for text color
+					accent: '#38bdf8',
+					lightBlue: '#e0f2fe', // Light blue background
+					darkBlue: '#0369a1', // Dark blue for contrast
+					purple: '#a855f7', // Purple accent
+					background: '#ffffff', // White background
+					text: '#1e293b', // Dark text
 				}
 			},
 			fontFamily: {

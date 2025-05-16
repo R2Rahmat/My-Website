@@ -1,4 +1,6 @@
 
+import { Badge } from "@/components/ui/badge";
+
 const techStack = [
   { name: "React", icon: "/assets/icons/react.svg" },
   { name: "Node.js", icon: "/assets/icons/nodejs.svg" },
@@ -23,13 +25,12 @@ const TechStack = () => {
           {techStack.map((tech, index) => (
             <div 
               key={tech.name}
-              className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow flex flex-col items-center justify-center"
+              className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow flex flex-col items-center justify-center animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex items-center justify-center w-16 h-16 md:w-20 md:h-20 mb-4 bg-portfolio-blue/5 rounded-full">
-                {/* Using placeholder for icons */}
-                <div className="w-8 h-8 rounded-full bg-portfolio-blue/20 flex items-center justify-center">
-                  <span className="text-xs font-medium text-portfolio-blue">{tech.name.substring(0, 2)}</span>
+                <div className="w-12 h-12 rounded-full bg-portfolio-blue/20 flex items-center justify-center">
+                  <span className="text-lg font-medium text-portfolio-blue">{tech.name.substring(0, 2)}</span>
                 </div>
               </div>
               <h3 className="text-lg font-medium text-center">{tech.name}</h3>

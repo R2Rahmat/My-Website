@@ -1,6 +1,8 @@
 
 import { Badge } from "@/components/ui/badge";
 import { Github, Linkedin, Mail, Phone } from "lucide-react";
+import { Helmet } from "react-helmet-async";
+import ImageSlider from "@/components/home/ImageSlider";
 
 const skills = [
   { category: "Frontend", items: ["HTML5", "CSS3", "ReactJs", "Vite", "AngularJs", "Bootstrap", "Tailwind CSS", "Next.js", "TypeScript", "Material-UI", "Redux"] },
@@ -24,9 +26,14 @@ const experience = [
 
 const About = () => {
   return (
-    <div>
+    <div className="bg-white">
+      <Helmet>
+        <title>MD RAHMAT - About</title>
+        <meta name="description" content="Learn about MD RAHMAT, a Full-Stack Developer specializing in MERN stack development." />
+      </Helmet>
+      
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-b from-portfolio-lightBlue/30 to-white">
+      <section className="py-20 bg-gradient-to-b from-portfolio-lightBlue to-white">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
@@ -52,15 +59,23 @@ const About = () => {
               </div>
             </div>
             <div>
-              <div className="aspect-square relative rounded-2xl overflow-hidden shadow-xl bg-gradient-to-br from-portfolio-blue to-portfolio-purple">
+              <div className="rounded-2xl overflow-hidden shadow-xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" 
+                  src="/lovable-uploads/98c170da-aba2-4c13-a9b7-607b9bfcbcc7.png" 
                   alt="MD RAHMAT" 
-                  className="object-cover w-full h-full mix-blend-overlay opacity-75" 
+                  className="object-cover w-full h-auto" 
                 />
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Images Slider Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto">
+          <h2 className="section-title text-center mb-12">My Journey</h2>
+          <ImageSlider />
         </div>
       </section>
 
@@ -100,7 +115,7 @@ const About = () => {
                 <h3 className="text-xl font-bold mb-4 text-portfolio-blue">{skillGroup.category}</h3>
                 <div className="flex flex-wrap gap-2">
                   {skillGroup.items.map((skill) => (
-                    <Badge key={skill} variant="secondary" className="text-sm py-1">
+                    <Badge key={skill} variant="secondary" className="text-sm py-1 bg-portfolio-lightBlue text-portfolio-darkBlue">
                       {skill}
                     </Badge>
                   ))}

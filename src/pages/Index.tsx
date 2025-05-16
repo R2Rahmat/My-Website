@@ -8,7 +8,7 @@ import ContactCTA from "@/components/home/ContactCTA";
 
 const Index = () => {
   return (
-    <div className="bg-portfolio-dark">
+    <div className="bg-white">
       <Helmet>
         <title>MD RAHMAT - Full-Stack Developer</title>
         <meta name="description" content="Full-Stack Developer specializing in MERN stack development with a passion for creating beautiful and functional web applications" />
