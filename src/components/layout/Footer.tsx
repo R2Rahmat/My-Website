@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import { Github, Linkedin, Mail, Phone } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone, Instagram } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -19,6 +19,9 @@ const Footer = () => {
             <div className="flex space-x-4">
               <a href="https://github.com/R2Rahmat" target="_blank" rel="noopener noreferrer" className="text-portfolio-light/90 hover:text-portfolio-blue transition-colors">
                 <Github size={20} />
+              </a>
+              <a href="https://www.instagram.com/md_rahmat_dev/" target="_blank" rel="noopener noreferrer" className="text-portfolio-light/90 hover:text-portfolio-blue transition-colors">
+                <Instagram size={20} />
               </a>
               <a href="https://www.linkedin.com/in/md-rahmt-devloper0012" target="_blank" rel="noopener noreferrer" className="text-portfolio-light/90 hover:text-portfolio-blue transition-colors">
                 <Linkedin size={20} />

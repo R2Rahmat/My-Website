@@ -77,7 +77,7 @@ const About = () => {
             <h2 className="section-title">My Story</h2>
             <div className="space-y-6 text-gray-700">
               <p>
-                I have completed my B.Tech in Computer Science and Engineering at IIMT College of Engineering, Greater Noida (2021-2025) with a CGPA of 7.0.
+                I have completed my B.Tech in Computer Science and Engineering at IIMT College of Engineering, Greater Noida (2021-2025) with a CGPA of 6.5.
               </p>
               <p>
                 My journey in web development began during my college studies where I discovered my passion for creating digital experiences. 
@@ -171,7 +171,7 @@ const About = () => {
                 </Badge>
               </div>
               <p className="text-gray-700">
-                Completed with a CGPA of 7.0. Coursework included Data Structures & Algorithms, 
+                Completed with a CGPA of 6.5. Coursework included Data Structures & Algorithms, 
                 Object-Oriented Programming, Computer Networks, Cloud Computing, Database Management Systems, 
                 Software Engineering, and Artificial Intelligence.
               </p>
