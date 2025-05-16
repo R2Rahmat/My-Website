@@ -2,7 +2,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Github, Linkedin, Mail, Phone } from "lucide-react";
 import { Helmet } from "react-helmet-async";
-import ImageSlider from "@/components/home/ImageSlider";
 
 const skills = [
   { category: "Frontend", items: ["HTML5", "CSS3", "ReactJs", "Vite", "AngularJs", "Bootstrap", "Tailwind CSS", "Next.js", "TypeScript", "Material-UI", "Redux"] },
@@ -71,14 +70,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Images Slider Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto">
-          <h2 className="section-title text-center mb-12">My Journey</h2>
-          <ImageSlider />
-        </div>
-      </section>
-
       {/* Bio Section */}
       <section className="py-16">
         <div className="container mx-auto">
@@ -86,7 +77,7 @@ const About = () => {
             <h2 className="section-title">My Story</h2>
             <div className="space-y-6 text-gray-700">
               <p>
-                I'm currently pursuing my B.Tech in Computer Science and Engineering at IIMT College of Engineering, Greater Noida (2021-2025) with a CGPA of 6.5.
+                I have completed my B.Tech in Computer Science and Engineering at IIMT College of Engineering, Greater Noida (2021-2025) with a CGPA of 7.0.
               </p>
               <p>
                 My journey in web development began during my college studies where I discovered my passion for creating digital experiences. 
@@ -180,7 +171,7 @@ const About = () => {
                 </Badge>
               </div>
               <p className="text-gray-700">
-                Currently pursuing with a CGPA of 6.5. Coursework includes Data Structures & Algorithms, 
+                Completed with a CGPA of 7.0. Coursework included Data Structures & Algorithms, 
                 Object-Oriented Programming, Computer Networks, Cloud Computing, Database Management Systems, 
                 Software Engineering, and Artificial Intelligence.
               </p>
