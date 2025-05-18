@@ -6,7 +6,7 @@ A full-stack personal portfolio built using the **MERN stack** (MongoDB, Express
 
 ## 🌐 Live Demo
 
-**🔗 URL:** [https://md-rahmat-786.vercel.app](https://md-rahmat-786.vercel.app)
+**🔗 URL:** [https://md-rahmat-786.vercel.app](https://dev-md-rahmat786.vercel.app/)
 
 ---
 
