@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
@@ -9,7 +8,6 @@ import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, Send, Instagram } from "lucide-react";
 import { Helmet } from "react-helmet-async";
-import { supabase } from "@/integrations/supabase/client";
 import {
   Form,
   FormControl,
@@ -56,26 +54,20 @@ const Contact = () => {
 
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
-    
     try {
-      // Insert the inquiry to Supabase
-      const { error } = await supabase
-        .from('project_inquiries')
-        .insert([
-          {
-            name: data.name,
-            email: data.email,
-            message: data.message,
-            project_type: data.projectType
-          }
-        ]);
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
 
-      if (error) throw error;
+      if (!response.ok) throw new Error("Network response was not ok");
 
       toast({
         title: "Message sent!",
         description: "Thank you for your inquiry. I'll get back to you soon.",
       });
+
       form.reset();
     } catch (error) {
       console.error("Error sending message:", error);
@@ -293,6 +285,7 @@ const Contact = () => {
         </div>
       </section>
     </div>
+  
   );
 };
 

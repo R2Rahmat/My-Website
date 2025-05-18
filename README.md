@@ -1,50 +1,55 @@
-# Welcome to your Lovable project
+# Welcome to Your Lovable Project
 
-## Project info
+## 🌐 Project Info
 
-**URL**: https://md-rahmat-786.vercel.app/
+**Live URL**: [https://md-rahmat-786.vercel.app](https://md-rahmat-786.vercel.app)
 
-## How can I edit this code?
+## 🛠 How to Run This Project Locally
 
-There are several ways of editing your application.
-
-Follow these steps:
+Follow these steps to get the app running on your machine:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
+# Step 1: Clone the repository using your Git URL
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
+# Step 2: Navigate into the project directory
 cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Step 3: Install the project dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Step 4: Start the development server
 npm run dev
-```
 
-**Edit a file directly in GitHub**
+📝 Editing the Code
+✅ Option 1: Edit Directly on GitHub
+Navigate to the file you want to edit.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Click the ✏️ "Edit" (pencil) icon in the top-right corner of the file view.
 
-**Use GitHub Codespaces**
+Make your changes and commit them directly to the repository.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+✅ Option 2: Use GitHub Codespaces
+Go to the main page of your GitHub repository.
 
-## What technologies are used for this project?
+Click the green "Code" button.
 
-This project is built with:
+Open the Codespaces tab.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Click "Create codespace on main" to start a new Codespace.
+
+Make changes, then commit and push as needed.
+
+🧱 Tech Stack
+This project is built using the following technologies:
+
+⚡ Vite – Fast frontend tooling
+
+🧠 TypeScript – Strongly-typed JavaScript
+
+⚛️ React – Component-based UI framework
+
+🧩 shadcn/ui – Beautiful UI components built with Radix UI and Tailwind CSS
+
+🎨 Tailwind CSS – Utility-first CSS framework
 

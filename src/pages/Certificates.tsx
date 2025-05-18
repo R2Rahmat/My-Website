@@ -7,13 +7,13 @@ import { Input } from "@/components/ui/input";
 const certificates = [
   {
     id: 1,
-    title: "Mastering Data Structure & Algorithms",
+    title: "Mastering in JAVA , Data Structure & Algorithms",
     issuer: "Apna College",
-    date: "2023",
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=500&h=350&fit=crop",
+    date: "2024",
+    image: "/public/lovable-uploads/DSA.jpg",
     description: "Comprehensive training on data structures and algorithms, with practical implementations and problem-solving techniques.",
     skills: ["Data Structures", "Algorithms", "Problem Solving", "Complexity Analysis"],
-    credentialId: "DSA-12345",
+    credentialId: "DSA=67651360ba06a4a78c01c557",
     credentialURL: "#"
   },
   {
@@ -62,14 +62,14 @@ const certificates = [
   },
   {
     id: 6,
-    title: "Java Certification",
-    issuer: "HackerRank",
-    date: "2022",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=350&fit=crop",
-    description: "Java programming certification demonstrating proficiency in core Java concepts, object-oriented programming, and Java applications.",
-    skills: ["Java", "OOP", "Data Structures", "Algorithms", "Java Collections"],
-    credentialId: "HKR-JAVA-01234",
-    credentialURL: "#"
+    title: "Publication Certification",
+    issuer: "HBRP Publication",
+    date: "2025",
+    image: "/public/lovable-uploads/MD-Rahma.jpg",
+    description: "MD Rahmat published his paper “Help-Kart: E-Com Robust Infrastructure for Development” in HBRP Journal, Vol. 1, Issue 2, 2025.",
+    skills: ["Web development, e-commerce infrastructure, data mining, knowledge discovery, software architecture, system design, technical writing, research, problem solving, innovation."],
+    credentialId: "For More details click to Verify Certificate",
+    credentialURL: "https://zenodo.org/records/15322043"
   },
   {
     id: 7,
@@ -82,6 +82,7 @@ const certificates = [
     credentialId: "HKR-JS-56789",
     credentialURL: "#"
   }
+  
 ];
 
 const Certificates = () => {

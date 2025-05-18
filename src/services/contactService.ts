@@ -1,53 +1,61 @@
+import { MongoClient } from 'mongodb';
+import dotenv from 'dotenv';
 
-import { supabase } from "@/integrations/supabase/client";
+dotenv.config(); // Make sure this is called early
+
+const uri = process.env.MONGO_URI as string;
+const client = new MongoClient(uri);
 
 interface ContactFormData {
   name: string;
   email: string;
   subject: string;
   message: string;
+  projectType?: string;
 }
 
 export const submitContactForm = async (formData: ContactFormData) => {
   try {
-    const { data, error } = await supabase
-      .from('contact_messages')
-      .insert([
-        { 
-          name: formData.name,
-          email: formData.email,
-          subject: formData.subject,
-          message: formData.message
-        }
-      ]);
-      
-    if (error) throw error;
-    
-    return { success: true, data };
+    await client.connect();
+    const db = client.db('portfolioDB');
+    const collection = db.collection('contact_messages');
+
+    const result = await collection.insertOne({
+      name: formData.name,
+      email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+      createdAt: new Date()
+    });
+
+    return { success: true, data: result };
   } catch (error) {
-    console.error('Error submitting contact form:', error);
+    console.error('❌ Error submitting contact form:', error);
     return { success: false, error };
+  } finally {
+    await client.close();
   }
 };
 
-export const submitProjectInquiry = async (formData: ContactFormData & { projectType?: string }) => {
+export const submitProjectInquiry = async (formData: ContactFormData) => {
   try {
-    const { data, error } = await supabase
-      .from('project_inquiries')
-      .insert([
-        { 
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-          project_type: formData.subject || formData.projectType || 'General'
-        }
-      ]);
-      
-    if (error) throw error;
-    
-    return { success: true, data };
+    await client.connect();
+    const db = client.db('portfolioDB');
+    const collection = db.collection('project_inquiries');
+
+    const result = await collection.insertOne({
+      name: formData.name,
+      email: formData.email,
+      message: formData.message,
+      projectType: formData.projectType || formData.subject || 'General',
+      createdAt: new Date()
+    });
+
+    return { success: true, data: result };
   } catch (error) {
-    console.error('Error submitting project inquiry:', error);
+    console.error('❌ Error submitting project inquiry:', error);
     return { success: false, error };
+  } finally {
+    await client.close();
   }
 };
