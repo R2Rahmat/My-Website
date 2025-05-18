@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 5050; // ✅ Avoid macOS port 5000 conflict
 
 // ✅ CORS config to allow frontend (e.g., Vite on 8080)
 app.use(cors({
-  origin: 'http://localhost:8080', // Change if frontend runs on another port or URL
+  origin:['https:dev-md-rahmat786.vercel.app',]
   methods: ['GET', 'POST'],
   credentials: true
 }));
