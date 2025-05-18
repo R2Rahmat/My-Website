@@ -11,7 +11,7 @@ const projects = [
     description: "A comprehensive platform for AC installation, repair, and maintenance services. Features service booking and technician scheduling.",
     image: "/lovable-uploads/1c47bbaf-4046-4e7b-9e48-602ce43828ff.png",
     tags: ["React", "TailwindCSS", "Node.js", "Express", "MongoDB", "Firebase"],
-    demoLink: "https://help-kart.vercel.app",
+    demoLink: "https://ac-website-by-r2r.vercel.app/",
     githubLink: "https://github.com/R2Rahmat/help-kart",
   },
   {
@@ -22,6 +22,7 @@ const projects = [
     tags: ["React", "Node.js", "Express", "MongoDB", "Redux", "TailwindCSS"],
     demoLink: "https://lovable.dev/projects/61127d66-2f22-49ea-ab31-9855572e43e4",
     githubLink: "https://github.com/R2Rahmat/ac-wallah",
+    featured: true
   },
   {
     id: 3,
