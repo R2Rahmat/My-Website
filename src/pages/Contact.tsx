@@ -55,7 +55,8 @@ const Contact = () => {
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
     try {
-      const response = await fetch("/api/contact", {
+      // Update the API endpoint URL to match our Express server route
+      const response = await fetch("http://localhost:5050/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),

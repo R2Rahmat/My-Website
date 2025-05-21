@@ -1,3 +1,4 @@
+
 // src/pages/api/contact.ts
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -6,7 +7,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const uri = process.env.MONGO_URI as string;
+const uri = process.env.MONGODB_URI || process.env.MONGO_URI as string;
 const client = new MongoClient(uri);
 const dbName = "portfolioDB";
 

@@ -1,9 +1,10 @@
+
 import { MongoClient } from 'mongodb';
 import dotenv from 'dotenv';
 
-dotenv.config(); // Make sure this is called early
+dotenv.config();
 
-const uri = process.env.MONGO_URI as string;
+const uri = process.env.MONGODB_URI || process.env.MONGO_URI as string;
 const client = new MongoClient(uri);
 
 interface ContactFormData {
@@ -25,6 +26,7 @@ export const submitContactForm = async (formData: ContactFormData) => {
       email: formData.email,
       subject: formData.subject,
       message: formData.message,
+      projectType: formData.projectType || null,
       createdAt: new Date()
     });
 
