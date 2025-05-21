@@ -1,3 +1,4 @@
+
 import express, { Request, Response } from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
@@ -12,7 +13,7 @@ const PORT = process.env.PORT || 5050; // ✅ Avoid macOS port 5000 conflict
 
 // ✅ CORS config to allow frontend (e.g., Vite on 8080)
 app.use(cors({
-  origin:['https:dev-md-rahmat786.vercel.app',]
+  origin: ['https://dev-md-rahmat786.vercel.app'],
   methods: ['GET', 'POST'],
   credentials: true
 }));
