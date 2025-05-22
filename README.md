@@ -22,25 +22,11 @@ git clone https://github.com/R2Rahmat/md-rahmat-portfolio.git
 # 2. Navigate into the project folder
 cd md-rahmat-portfolio
 
-📦 Backend Setup
-# 3. Go into the server directory
-cd server
-
-# 4. Install server dependencies
+# 3. Install dependencies
 npm install
 
-# 5. Start the backend server
+# 4. Start the development server
 npm run dev
-
-💻 Frontend Setup
-# 6. Open a new terminal and navigate to the client folder
-cd client
-
-# 7. Install frontend dependencies
-npm install
-
-# 8. Start the React development server
-npm start
 ```
 
 ## 📝 Deployment Information
@@ -76,7 +62,7 @@ This portfolio is configured to deploy on Vercel with the following settings:
 
 **Dev Tools:**
 - Vite
-- Nodemon
+- Lovable Tagger (for component development)
 - VS Code
 
 ## 🧑‍💻 Contributing
