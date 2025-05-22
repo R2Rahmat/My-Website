@@ -11,7 +11,7 @@ const certificates = [
     title: "Mastering in JAVA , Data Structure & Algorithms",
     issuer: "Apna College",
     date: "2024",
-    image: "/lovable-uploads/DSA.jpg", // Fixed path by removing "public" prefix
+    image: "/lovable-uploads/DSA.jpg", 
     description: "Comprehensive training on data structures and algorithms, with practical implementations and problem-solving techniques.",
     skills: ["Data Structures", "Algorithms", "Problem Solving", "Complexity Analysis"],
     credentialId: "DSA=67651360ba06a4a78c01c557",
@@ -66,7 +66,7 @@ const certificates = [
     title: "Publication Certification",
     issuer: "HBRP Publication",
     date: "2025",
-    image: "/lovable-uploads/MD-Rahma.jpg", // Fixed path by removing "public" prefix
+    image: "/lovable-uploads/MD-Rahma.jpg",
     description: 'MD Rahmat published his paper "Help-Kart: E-Com Robust Infrastructure for Development" in HBRP Journal, Vol. 1, Issue 2, 2025.',
     skills: ["Web development", "E-commerce infrastructure", "Data mining", "Knowledge discovery", "Software architecture", "System design", "Technical writing", "Research", "Problem solving", "Innovation"],
     credentialId: "For More details click to Verify Certificate",

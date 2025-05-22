@@ -7,7 +7,7 @@ A full-stack personal portfolio built using the **MERN stack** (MongoDB, Express
 
 ## 🌐 Live Demo
 
-**🔗 URL:** [https://md-rahmat-786.vercel.app](https://dev-md-rahmat786.vercel.app/)
+**🔗 URL:** [https://md-rahmat-portfolio.vercel.app](https://md-rahmat-portfolio.vercel.app/)
 
 ---
 
@@ -17,10 +17,10 @@ Follow these steps to set up the project on your local machine:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/R2Rahmat/portfolio.git
+git clone https://github.com/R2Rahmat/md-rahmat-portfolio.git
 
 # 2. Navigate into the project folder
-cd portfolio
+cd md-rahmat-portfolio
 
 📦 Backend Setup
 # 3. Go into the server directory
@@ -43,17 +43,30 @@ npm install
 npm start
 ```
 
+## 📝 Deployment Information
+
+This portfolio is configured to deploy on Vercel with the following settings:
+
+- **Framework**: Vite
+- **Root Directory**: ./
+- **Build Command**: npm run build
+- **Output Directory**: dist
+- **Install Command**: npm install
+
 ## 💡 Features
 - 📝 Dynamic project content stored in MongoDB
 - 📧 Contact form with backend submission
 - ⚡ Fast and responsive UI using React
 - 🔐 Secure REST API with Express and Node.js
-- 🌈 Styled with Tailwind CSS
+- 🌈 Styled with Tailwind CSS and Shadcn UI
 
 ## 🔧 Tech Stack
 **Frontend:**
-- React
+- React with TypeScript
 - Tailwind CSS
+- Shadcn UI Components
+- React Router
+- React Query
 - Axios
 
 **Backend:**
@@ -62,7 +75,7 @@ npm start
 - MongoDB (via Mongoose)
 
 **Dev Tools:**
-- Vite / Webpack
+- Vite
 - Nodemon
 - VS Code
 
