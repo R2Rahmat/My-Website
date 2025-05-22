@@ -12,7 +12,6 @@ import Certificates from "./pages/Certificates";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
-import { TooltipProvider } from "@/components/ui/tooltip";
 import { Toaster } from "@/components/ui/toaster";
 import { SonnerToaster } from "@/components/ui/index";
 
@@ -25,22 +24,20 @@ const App = () => {
       <HelmetProvider>
         <QueryClientProvider client={queryClient}>
           <BrowserRouter>
-            <TooltipProvider>
-              <Routes>
-                <Route element={<MainLayout />}>
-                  <Route path="/" element={<Index />} />
-                  <Route path="/about" element={<About />} />
-                  <Route path="/projects" element={<Projects />} />
-                  <Route path="/certificates" element={<Certificates />} />
-                  <Route path="/contact" element={<Contact />} />
-                </Route>
-                <Route path="*" element={<NotFound />} />
-              </Routes>
+            <Routes>
+              <Route element={<MainLayout />}>
+                <Route path="/" element={<Index />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/certificates" element={<Certificates />} />
+                <Route path="/contact" element={<Contact />} />
+              </Route>
+              <Route path="*" element={<NotFound />} />
+            </Routes>
 
-              {/* Notification systems */}
-              <Toaster />
-              <SonnerToaster />
-            </TooltipProvider>
+            {/* Notification systems */}
+            <Toaster />
+            <SonnerToaster />
           </BrowserRouter>
         </QueryClientProvider>
       </HelmetProvider>
