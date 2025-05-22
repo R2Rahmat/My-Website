@@ -1,9 +1,11 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
-import { Search } from "lucide-react";
+import { Search, Loader2 } from "lucide-react";
 import { Input } from "@/components/ui/input";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const certificates = [
   {
@@ -88,6 +90,7 @@ const certificates = [
 const Certificates = () => {
   const [selectedCertificate, setSelectedCertificate] = useState<typeof certificates[0] | null>(null);
   const [searchTerm, setSearchTerm] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
 
   const filteredCertificates = certificates.filter(cert => 
     cert.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -95,14 +98,23 @@ const Certificates = () => {
     cert.skills.some(skill => skill.toLowerCase().includes(searchTerm.toLowerCase()))
   );
 
+  // Simulate loading state
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 800);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div>
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-b from-portfolio-lightBlue/30 to-white">
         <div className="container mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">My Certificates</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">My Certificates & Qualifications</h1>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            Professional certifications that demonstrate my expertise and commitment to continuous learning.
+            Professional certifications and qualifications that demonstrate my expertise and commitment to continuous learning.
           </p>
         </div>
       </section>
@@ -126,7 +138,11 @@ const Certificates = () => {
       {/* Certificates Grid */}
       <section className="py-16">
         <div className="container mx-auto">
-          {filteredCertificates.length === 0 ? (
+          {isLoading ? (
+            <div className="flex justify-center items-center py-20">
+              <Loader2 className="h-8 w-8 animate-spin text-portfolio-blue" />
+            </div>
+          ) : filteredCertificates.length === 0 ? (
             <div className="text-center py-16">
               <h3 className="text-xl font-medium text-gray-600">No certificates found matching your search.</h3>
             </div>
@@ -135,15 +151,23 @@ const Certificates = () => {
               {filteredCertificates.map((certificate) => (
                 <div 
                   key={certificate.id} 
-                  className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden cursor-pointer group"
+                  className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden cursor-pointer group"
                   onClick={() => setSelectedCertificate(certificate)}
                 >
-                  <div className="aspect-video relative overflow-hidden">
-                    <img 
-                      src={certificate.image} 
-                      alt={certificate.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                    />
+                  <div className="relative overflow-hidden">
+                    <AspectRatio ratio={16/9}>
+                      <img 
+                        src={certificate.image} 
+                        alt={certificate.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                      />
+                    </AspectRatio>
+                    <div className="absolute top-2 right-2">
+                      <Avatar className="h-8 w-8 border-2 border-white">
+                        <AvatarImage src="/lovable-uploads/MD-Rahma.jpg" />
+                        <AvatarFallback>{certificate.issuer.substring(0, 2)}</AvatarFallback>
+                      </Avatar>
+                    </div>
                   </div>
                   <div className="p-6">
                     <div className="flex justify-between items-start mb-2">
