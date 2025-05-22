@@ -37,13 +37,15 @@ export * from "./separator";
 export * from "./sheet";
 export * from "./skeleton";
 export * from "./slider";
-export * from "./sonner";
 export * from "./switch";
 export * from "./table";
 export * from "./tabs";
 export * from "./textarea";
 export * from "./toast";
+// Export Toaster from toaster.tsx
 export * from "./toaster";
+// Export Sonner's Toaster as SonnerToaster to avoid conflicts
+export { Toaster as SonnerToaster, toast as sonnerToast } from "./sonner";
 export * from "./toggle";
 export * from "./toggle-group";
 export * from "./tooltip";
