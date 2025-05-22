@@ -23,13 +23,23 @@ export const useContactFormSubmission = () => {
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
     try {
-      const response = await fetch("http://localhost:5050/api/contact", {
+      // Try the API route first (Next.js)
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
 
-      if (!response.ok) throw new Error("Network response was not ok");
+      if (!response.ok) {
+        // If Next.js API route fails, try the Express backend
+        const backendResponse = await fetch("http://localhost:5050/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        });
+        
+        if (!backendResponse.ok) throw new Error("Both API endpoints failed");
+      }
 
       toast({
         title: "Message sent!",
