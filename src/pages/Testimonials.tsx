@@ -6,7 +6,7 @@ const testimonials = [
     id: 1,
     name: "Sarah Johnson",
     position: "CEO, TechStart",
-    content: "John is an exceptional developer who delivered our project on time and exceeded our expectations. His attention to detail and problem-solving skills are impressive. We've received numerous compliments on the user experience of our platform.",
+    content: "MD RAHMAT is an exceptional developer who delivered our project on time and exceeded our expectations. His attention to detail and problem-solving skills are impressive. We've received numerous compliments on the user experience of our platform.",
     rating: 5,
     avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=faces",
     project: "E-Commerce Platform",
